@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
     var body: some View {
@@ -18,16 +19,14 @@ struct ContentView: View {
             ZStack{
                 Capsule()
                     .foregroundColor(.teal)
-                Button("HELLO") {
-                        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                    }
-                .foregroundColor(.black)
-                
+                Button("Hello") {
+                    print("WORLD!")
+                }
             }
-            Toggle(isOn: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Is On@*/.constant(true)/*@END_MENU_TOKEN@*/) {
-                Text("world")
+            Toggle(isOn: .constant(true)) {
+                Text("HI")
             }
-            Gauge(value: /*@START_MENU_TOKEN@*/0.5/*@END_MENU_TOKEN@*/, in: /*@START_MENU_TOKEN@*/0...1/*@END_MENU_TOKEN@*/) {
+            Gauge(value: 0.25) {
                 Text("Goodbye")
             }
         }
